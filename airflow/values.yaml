@@ -270,13 +270,13 @@ dags:
   git:
     ##
     ## url to clone the git repository
-    url:
+    url: git@github.com:jeffdeville/tmp_airflow_k8s.git
     ##
     ## branch name, tag or sha1 to reset to
     ref: master
   initContainer:
     ## Fetch the source code when the pods starts
-    enabled: false
+    enabled: init
     ## Image for the init container (any image with git will do)
     image:
       ## docker-airflow image
